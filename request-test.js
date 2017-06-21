@@ -39,10 +39,10 @@ setInterval(() => {
         console.log('::CURRENT STATUS:', buy - sell, '::');
 
         if (times > 4) {
-            let p, n = 0;
+            let p = n = 0;
 
             _.each(amount, (v) => {
-                if (v > 0) {
+                if (+v > 0) {
                     p++;
                 } else {
                     n++;
@@ -62,4 +62,4 @@ setInterval(() => {
             times = 0;
         }
     });
-}, 60000);
+}, 5000);
